@@ -5,7 +5,7 @@ $(document).ready(function(){
         loadQuestion();
        
     });
-    $(document).on('click', '.answer-button', function(){
+    $(document).on('click', '.answerButton', function(){
         userAnswer = $(this).text();
         clicked();
 
@@ -78,9 +78,9 @@ $(document).ready(function(){
     }
     var loadQuestion= function(){
         timer = setInterval(coundown, 1000);
-        $('#question').html('<h2>' + randQuestions[currentQuestion].question+'</h2>');
+        $('#options').html('<h2>' + randQuestions[currentQuestion].question+'</h2>');
         for (var i = 0; i < randQuestions[currentQuestion].answer.length; i++){
-            $('#options').append('<button class = "answer-button" id = "button-'+i+'"data-name="'+ randQuestions[currentQuestion].answer[i]+'">' + randQuestions[currentQuestion].answer[i]+'</button>');
+            $('#options').append('<button class = "answerButton row" id = "button-'+i+'">' + randQuestions[currentQuestion].answer[i]+'</button>');
 
         }
 
@@ -109,9 +109,9 @@ $(document).ready(function(){
     var results= function(){
         clearInterval(timer);
         $('#options').html('All Done');
-        $('#options').append('Correct: ' + correct);
-        $('#options').append('Incorrect: ' + incorrect);
-        $('#options').append('Unanswered: ' + unanswered);
+        $('#options').append('| Correct: ' + correct);
+        $('#options').append('| Incorrect: ' + incorrect);
+        $('#options').append('| Unanswered: ' + unanswered);
         $('#options').append('<button id = "reset">Reset </button>')
         
         
@@ -127,7 +127,7 @@ $(document).ready(function(){
         }else{
             answeredIncorrectly();
         }
-        console.log($('#options').text());
+       
 
         
 
@@ -160,8 +160,9 @@ $(document).ready(function(){
 
     }
     var reset= function(){
+
         currentQuestion = 0;
-        counter = 0;
+        counter = 30;
         correct = 0;
         incorrect = 0;
         unanswered = 0;

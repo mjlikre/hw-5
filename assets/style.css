@@ -1,0 +1,42 @@
+body{
+    background-image: url(https://tryengineering.org/wp-content/uploads/game-graphic.png);
+}
+.container{
+    background-color:yellowgreen;
+    padding: 20px;
+    margin-top: 60px;
+    
+}
+#header{
+    color:white;
+    font-size: 60px;
+    font-weight:bold;
+    
+    text-shadow: 2px 2px 10px black;
+
+}
+#start{
+    background-color: orangered; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.answerButton{
+    font-size : 24px;
+    height:100px;
+    width: 300px;
+    background-color: white;
+    margin:20px;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+#timer{
+    font-size: 60px;
+}
