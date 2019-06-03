@@ -5,6 +5,8 @@ body{
     background-color:yellowgreen;
     padding: 20px;
     margin-top: 60px;
+    height: 80%;
+    width: 80%;
     
 }
 #header{
@@ -16,7 +18,7 @@ body{
 
 }
 #start{
-    background-color: orangered; /* Green */
+    background-color: orangered;
     border: none;
     color: white;
     padding: 15px 32px;
